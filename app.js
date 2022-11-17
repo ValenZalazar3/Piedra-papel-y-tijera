@@ -31,14 +31,14 @@ function play(userOption) {
 
     resultText.innerHTML = "¡ELIGIENDO!";
 
-    setInterval(function() {
+    const interval = setInterval(function() {
         const machineOption = calcMachineOption();
-
-        machineImg.scr = "img/" + machineOption + ".svg";
-        
-    }, 150);
+        machineImg.src = "img/" + machineOption + ".svg";      
+    }, 100);
 
     setTimeout(function () {
+
+        clearInterval(interval);
 
         const machineOption = calcMachineOption();
 
